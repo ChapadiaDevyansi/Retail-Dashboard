@@ -18,7 +18,7 @@ st.set_page_config(
 @st.cache_data
 def load_data():
     
-    df = pd.read_excel(r"C:\Users\devya\OneDrive\Desktop\Retail Dashboard\cleaned_online_retail.csv.xlsx")
+    df = pd.read_excel("cleaned_online_retail.csv.xlsx")
 
       
 
