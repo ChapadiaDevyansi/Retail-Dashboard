@@ -16,10 +16,14 @@ st.set_page_config(
 # Load Data
 # -----------------------------
 @st.cache_data
-#def load_data():
+def load_data():
     #df = pd.read_excel("dataset/cleaned_online_retail.csv"
     #".xlsx")
-     df = pd.DataFrame()
+     file_id = "1RCw3tG7ARpY6GyaVvtq8CnzfyEXYTu36"
+     url = f"file_id = "https://docs.google.com/spreadsheets/d/1RCw3tG7ARpY6GyaVvtq8CnzfyEXYTu36/edit?usp=drive_link&ouid=107011005573167658543&rtpof=true&sd=true"
+    
+
+      df = pd.read_excel(url, engine="openpyxl")
 
     df["InvoiceDate"] = pd.to_datetime(df["InvoiceDate"])
     df["Month"] = df["InvoiceDate"].dt.strftime("%b %Y")
