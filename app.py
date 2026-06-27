@@ -19,7 +19,7 @@ st.set_page_config(
 #def load_data():
     #df = pd.read_excel("dataset/cleaned_online_retail.csv"
     #".xlsx")
-    df = pd.DataFrame()
+     df = pd.DataFrame()
 
     df["InvoiceDate"] = pd.to_datetime(df["InvoiceDate"])
     df["Month"] = df["InvoiceDate"].dt.strftime("%b %Y")
